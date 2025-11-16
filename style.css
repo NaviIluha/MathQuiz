@@ -1,0 +1,186 @@
+/* ГЛОБАЛЬНІ СТИЛІ */
+body {
+    background-image: url("bgBlue.jpg");
+    background-size: cover;        /* Масштаб під весь екран */
+    background-position: center;   /* Центрування */
+    background-repeat: no-repeat;  /* Без повторів */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Playwrite DE Grund Guides", cursive;
+}
+
+/* --- СТАРТОВА СТОРІНКА --- */
+
+.btn-start {
+    width: 20%;
+    margin: 150px auto;
+    padding: 40px 80px;
+    border: 3px solid #fff;
+    font-size: 2em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.4s ease, background 0.4s, color 0.4s;
+}
+
+/* Анімація збільшення */
+.btn-start:hover {
+    transform: scale(1.2);
+    background-color: #fff;
+    color: #000;
+}
+
+/* --- СТОРІНКА ТЕСТУВАННЯ --- */
+
+.card-qw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* центрує весь блок */
+    margin-top: 100px;
+}
+
+/* ПИТАННЯ — великий, жирний, 3D та по центру */
+.qw {
+    font-size: 55px;
+    font-weight: 900;
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 20px;
+    /* 3D текст */
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 #222,
+        6px 6px 6px rgba(0,0,0,0.7);
+
+    /* плавний ефект наведення */
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Анімація на наведенні – питання «оживає» */
+.qw:hover {
+    transform: scale(1.07);
+    text-shadow:
+        3px 3px 0 #000,
+        6px 6px 0 #333,
+        10px 10px 12px rgba(0,0,0,0.8);
+}
+
+/* БЛОК ВІДПОВІДЕЙ — зроблено меншим */
+.answers {
+    display: flex;
+    flex-direction: column;
+    width: 20%;          /* було 25% — тепер менше */
+    text-align: center;
+}
+
+/* ВІДПОВІДІ – компактніші */
+.ans {
+    padding: 10px 5px;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2em;
+
+    transition: transform 0.35s ease, 
+                background 0.35s, 
+                color 0.35s,
+                box-shadow 0.35s;
+}
+
+/* Анімація збільшення + світіння */
+.ans:hover {
+    transform: scale(1.12);
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 15px #fff, 0 0 25px #fff;
+}
+
+
+/* --- ЗОБРАЖЕННЯ --- */
+
+.img {
+    transform: translateY(100%);
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+}
+
+/* --- СТОРІНКА РЕЗУЛЬТАТІВ --- */
+
+.result {
+    text-align: center;
+    font-style: italic;
+    margin-top: 100px;
+    color: #fff;
+}
+
+.score {
+    font-size: 40px;
+    font-style: italic;
+    color: #fff;
+}
+
+.total {
+    font-size: 30px;
+    font-style: italic;
+    color: #ddd;
+}
+
+.numbers {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+.num {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+
+    /* 3D екструзія */
+    text-shadow: 
+        2px 2px 0 #000,
+        4px 4px 0 #000,
+        6px 6px 0 #000,
+        8px 8px 0 #000,
+        10px 10px 0 #000;
+}
+
+.res{
+    transform: translateX(-500px);
+    position: absolute;
+}
+
+.res1{
+    transform: translateX(100%);
+    position: absolute;
+}
+
+.restart{
+    position: absolute;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 
+        2px 2px 0 #000,
+        4px 4px 0 #000,
+        6px 6px 0 #000,
+        8px 8px 0 #000,
+        10px 10px 0 #000;
+}
